@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        /**
+         * class是es6新增的语法糖
+         *
+         * 概念: es6提供了更接近传统语法的写法，引入Class这个概念，作为对象的模板
+         *
+         * 作用： 通过`class`关键字，可以定义类
+         *
+         * 优点：新的`class`写法只是让对象原型的写法更清晰、更像面向对象编程的语法而已
+         *
+         * class get set
+         *
+         * class static 定义方法
+         *      概念 ： 类（class）通过**static**关键字定义静态方法
+         *      特点：不能在类的实例上调用静态方法，而应该通过类的本身调用。这些通常是实用程序方法，列如创建或克隆对象的功能
+         *
+         * 类的继承 重点：
+         *      关键字：extends
+         *      关键方法 super() 父类.call(this)
+         * **/
+
+        // class Point {
+        //     constructor(x, y) {
+        //         this.x = x
+        //         this.y = y
+        //     }
+        //     toString() {
+        //         return '(' + this.x + ',' + this.y + ')'
+        //     }
+        // }
+        // let p = new Point(1, 2)
+        // let result = p.toString()
+        // console.log(result);
+
+
+
+        // function Phone(brand, price) {
+        //     this.brand = brand
+        //     this.price = price
+        // }
+        // Phone.prototype.call = function () {
+        //     console.log('我可以打电话的');
+        // }
+        // Phone.prototype.info = function () {
+        //     return '(我手机型号是：' + this.brand + ',我手机价格是' + this.y + '我的手机林深)'
+        // }
+        // let p = new Phone('荣耀', '99.99')
+
+
+
+        // class Phone {
+        //     constructor(brand, price) {
+        //         this.brand = brand
+        //         this.price = price
+        //     }
+        //     call() {
+        //         console.log('我可以打电话的');
+        //     }
+        //     info() {
+        //         return '(我手机型号是：' + this.brand + ',我手机价格是' + this.y + '我的手机林深)'
+        //     }
+        //     toString() {
+        //         return '(' + this.brand + ',' + this.price + ')'
+        //     }
+        // }
+        // let p1 = new Phone('荣耀', '99.99')
+        // let result = p1.toString()
+        // console.log(result);
+
+    </script>
+</body>

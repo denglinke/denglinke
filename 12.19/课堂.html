@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <canvas id="c" style="border:1px solid #ccc" width="700px" height="600px"></canvas>
+</body>
+<script>
+
+    const cnv = document.getElementById('c')
+    const cxt = cnv.getContext('2d')
+
+    cxt.moveTo(0, 150)
+    cxt.lineTo(800, 150)
+    cxt.strokeStyle = 'red'
+    cxt.stroke()
+
+    cxt.font = '20px Arial'
+
+    cxt.textBaseline = 'alphabetic'
+    cxt.fillText('老六', 10, 150)
+
+    cxt.textBaseline = 'top'
+    cxt.fillText('老六', 200, 150)
+
+    cxt.textBaseline = 'bottom'
+    cxt.fillText('老六', 320, 150)
+
+    cxt.textBaseline = 'middle'
+    cxt.fillText('老六', 480, 150)
+
+    cxt.textBaseline = 'hanging'
+    cxt.fillText('老六', 640, 150)
+
+
+
+
+
+
+
+
+
+
+
+
+    // cxt.moveTo(200, 0)
+    // cxt.lineTo(200, 400)
+    // cxt.strokeStyle = 'red'
+    // cxt.stroke()
+
+    // cxt.font = '40px Arial'
+
+    // cxt.textAlign = 'start'
+    // cxt.fillText('老六', 200, 40)
+
+    // cxt.textAlign = 'end'
+    // cxt.fillText('老六', 200, 100)
+
+    // cxt.textAlign = 'left'
+    // cxt.fillText('老六', 200, 160)
+
+    // cxt.textAlign = 'right'
+    // cxt.fillText('老六', 200, 220)
+
+    // cxt.textAlign = 'center'
+    // cxt.fillText('老六', 200, 280)
+
+
+
+
+
+    // let text = '666'
+    // cxt.font = 'bold 40px Arial'
+    // cxt.fillText(text, 40, 80)
+    // console.log(cxt.measureText(text).width);
+
+        // cxt.font = '80px Arial'
+        // cxt.fillStyle = 'red'
+        // cxt.fillText('老六', 30, 90)
+
+
+    // cxt.font = '80px Arial'
+    // cxt.fontStyle = 'red'
+    // cxt.strokeText('老六', 30, 90)
+
+
+
+
+    // cxt.moveTo(50, 50)
+    // cxt.lineTo(250, 50)
+    // cxt.lineTo(250, 250)
+    // cxt.lineTo(50, 250)
+    // cxt.closePath()
+
+    // cxt.moveTo(200, 100)
+    // cxt.lineTo(100, 100)
+    // cxt.lineTo(100, 200)
+    // cxt.lineTo(200, 200)
+    // cxt.closePath()
+    // cxt.fill()
+
+    // cxt.lineWidth = 20
+    // cxt.strokeStyle = 'pink'
+    // cxt.moveTo(50, 60)
+    // cxt.setLineDash([10])
+    // cxt.stroke()
+
+    // cxt.beginPath()
+
+
+
+
+
+    // cxt.beginPath()
+    // cxt.arc(150, 150, 80, 0, 180 * Math.PI / 180, true)
+    // cxt.closePath()
+    // cxt.stroke()
+
+
+
+    // cxt.beginPath()
+    // cxt.arc(150, 150, 80, 0, 180 * Math.PI / 180)
+    // cxt.closePath()
+    // cxt.stroke()
+
+
+    // cxt.beginPath()
+    // cxt.arc(150, 150, 80, 0, 360 * Math.PI / 180)
+    // cxt.closePath()
+    // cxt.stroke()
+
+
+
+
+    // cxt.moveTo(50, 50)
+    // cxt.lineTo(50, 200)
+    // cxt.lineTo(200, 200)
+    // cxt.closePath()
+
+    // cxt.lineJoin = 'miter'
+    // cxt.lineWidth = 20
+    // cxt.stroke()
+
+
+    // cxt.moveTo(50, 50)
+    // cxt.lineTo(50, 200)
+    // cxt.lineTo(200, 200)
+    // cxt.lineTo(50, 50)
+    // cxt.stroke()
+
+    // cxt.fillStyle = 'blue'
+    // cxt.fillRect(50, 50, 200, 200)
+    // cxt.clearRect(60, 60, 180, 90)
+
+    // cxt.strokeStyle = 'blue'
+    // cxt.fillStyle = 'red'
+    // cxt.rect(50, 50, 200, 200)
+    // cxt.stroke()
+    // cxt.fill()
+
+    // cxt.fillStyle = 'blue'
+    // cxt.fillRect(50, 50, 200, 200)
+    // cxt.strokeStyle = 'red'
+    // cxt.lineWidth = 10
+    // cxt.strokeRect(50, 50, 200, 200)
+
+
+
+
+
+
+
+
+
+    // cxt.strokeStyle = 'blue'
+    // cxt.strokeRect(50, 50, 200, 200)
+
+
+    // cxt.moveTo(50, 50)
+    // cxt.lineTo(100, 25)
+    // cxt.lineTo(100, 75)
+    // cxt.lineTo(50, 100)
+    // cxt.lineTo(50, 50)
+    // cxt.strokeStyle = 'blue'
+    // cxt.stroke()
+
+
+
+    // cxt.moveTo(50, 200)
+    // cxt.lineTo(100, 50)
+    // cxt.lineTo(200, 200)
+    // cxt.lineTo(250, 50)
+    // cxt.lineWidth = 10
+    // cxt.lineCap = 'round'
+    // cxt.strokeStyle = 'blue'
+    // cxt.stroke()
+
+    // cxt.moveTo(20, 100)
+    // cxt.lineTo(200, 100)
+    // cxt.lineWidth = 10
+    // cxt.strokeStyle = 'blue'
+    // cxt.stroke()
+
+    // cxt.moveTo(20, 120.5)
+    // cxt.lineTo(200, 120.5)
+    // cxt.lineWidth = 4
+    // cxt.strokeStyle = 'yellow'
+    // cxt.stroke()
+
+
+    // const cnv = document.getElementById('c')
+    // const cxt = cnv.getContext('2d')
+    // cxt.moveTo(100, 100)
+    // cxt.lineTo(200, 100)
+    // cxt.lineWidth = 40
+    // cxt.strokeStyle = 'blue'
+    // cxt.lineCap = 'round'
+    // cxt.stroke()
+    // cxt.moveTo(100, 100)
+    // cxt.lineTo(100, 200)
+    // cxt.lineWidth = 40
+    // cxt.stroke()
+
+    // cxt.moveTo(100, 150)
+    // cxt.lineTo(200, 150)
+    // cxt.lineWidth = 40
+    // cxt.strokeStyle = 'blue'
+    // cxt.lineCap = 'round'
+    // cxt.stroke()
+    // cxt.moveTo(100, 100)
+    // cxt.lineTo(100, 150)
+    // cxt.lineWidth = 40
+    // cxt.stroke()
+
+
+
+    // cxt.moveTo(70, 200)
+    // cxt.lineTo(200, 200)
+    // cxt.stroke()
+    // cxt.moveTo(70, 220)
+    // cxt.lineTo(200, 220)
+    // cxt.stroke()
+
+</script>
+
+</html>

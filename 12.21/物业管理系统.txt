@@ -1,0 +1,112 @@
+登录接口：http://120.48.48.64:8096/api/user/login
+首页：http://120.48.48.64:8096/api/user/getMenuList
+系统管理-员工管理：
+页面渲染：http://120.48.48.64:8096/api/user/list?loginName=&phone=&curentPage=1&pageSize=10&total=0
+添加：http://120.48.48.64:8096/api/user post请求
+编辑：http://120.48.48.64:8096/api/user get请求
+删除：http://120.48.48.64:8096/api/user/17 DELETE请求
+搜索：http://120.48.48.64:8096/api/user/list?loginName=%E5%AE%8B%E5%A2%9E%E6%9D%B0&phone=&curentPage=1&pageSize=10&total=7 get请求
+重置：http://120.48.48.64:8096/api/user/list?loginName=&phone=&curentPage=1&pageSize=10&total=1 get请求
+分配角色-表格接口：http://120.48.48.64:8096/api/role/list?pageSize=10&currentPage=1&total=0  get
+分配角色接口：http://120.48.48.64:8096/api/user/saveRole  post 
+
+系统管理-角色管理：
+页面渲染：http://120.48.48.64:8096/api/role/list?pageSize=10&currentPage=1&roleName=&total=0  get
+添加：http://120.48.48.64:8096/api/role post请求
+编辑：http://120.48.48.64:8096/api/role get请求
+删除：http://120.48.48.64:8096/api/role/9 DELETE请求
+搜索：http://120.48.48.64:8096/api/role/list?pageSize=10&currentPage=1&roleName=%E4%B8%9A%E4%B8%BB&total=3 get请求
+重置：http://120.48.48.64:8096/api/role/list?pageSize=10&currentPage=1&roleName=&total=1 get
+分配权限：http://120.48.48.64:8096/api/role/getAssignTree?roleId=6&userId=19  get 服务器出错
+
+系统管理-权限管理：
+页面渲染：http://120.48.48.64:8096/api/menu/list  get
+添加-上级菜单列表：http://120.48.48.64:8096/api/menu/parent get  
+添加：http://120.48.48.64:8096/api/menu post
+编辑：http://120.48.48.64:8096/api/menu put请求
+删除：http://120.48.48.64:8096/api/menu/9 DELETE请求
+
+房屋管理-栋数管理：
+页面渲染：http://120.48.48.64:8096/api/HouseBuilding/list?name=&type=&pageSize=10&currentPage=1&total=0 get
+添加：http://120.48.48.64:8096/api/HouseBuilding post请求  {"buildId":"","editType":"0","type":"0","name":"宋增杰","orderNum":"1"}
+编辑：http://120.48.48.64:8096/api/HouseBuilding put请求  {"buildId":"","editType":"0","type":"0","name":"宋增杰","orderNum":"1"}
+删除：http://120.48.48.64:8096/api/HouseBuilding/7 DELETE请求
+搜索：http://120.48.48.64:8096/api/HouseBuilding/list?name=A%E6%A0%8B&type=0&pageSize=10&currentPage=1&total=5 get请求
+重置：http://120.48.48.64:8096/api/HouseBuilding/list?name=&type=&pageSize=10&currentPage=1&total=1 get
+
+房屋管理-单元管理：
+页面渲染：http://120.48.48.64:8096/api/houseUnit/list?buildNme=&unitName=&currentPage=1&pageSize=10&total=0 get
+添加：http://120.48.48.64:8096/api/houseUnit post请求 {"editType":"0","unitId":"","buildId":1,"unitName":"111"}
+编辑：http://120.48.48.64:8096/api/houseUnit put请求  {"unitId":12,"buildId":2,"unitName":"宋增杰11"}
+删除：http://120.48.48.64:8096/api/houseUnit/11 DELETE请求
+搜索：http://120.48.48.64:8096/api/houseUnit/list?buildNme=B%E6%A0%8B&unitName=%E5%AE%8B%E5%A2%9E%E6%9D%B0&currentPage=1&pageSize=10&total=6 get请求
+重置：http://120.48.48.64:8096/api/houseUnit/list?buildNme=&unitName=&currentPage=1&pageSize=10&total=1 get
+
+房屋管理-房屋列表：
+页面渲染：http://120.48.48.64:8096/api/houseList/list?buildNme=&status=&unitName=&houseNum=&currentPage=1&pageSize=10&total=0 get
+添加-所属栋数下拉接口：http://120.48.48.64:8096/api/HouseBuilding/unitList  
+   所属栋数对应所属单元数据：A栋：http://120.48.48.64:8096/api/houseUnit/getUnitListByBuildId?buildId=1
+				    B栋：http://120.48.48.64:8096/api/houseUnit/getUnitListByBuildId?buildId=2
+  				    C栋：http://120.48.48.64:8096/api/houseUnit/getUnitListByBuildId?buildId=5
+				   D栋：http://120.48.48.64:8096/api/houseUnit/getUnitListByBuildId?buildId=6
+添加：http://120.48.48.64:8096/api/houseList post {"editType":"0","houseId":"","unitId":3,"houseNum":"1222","houseArea":"2322","status":"1","buildvalue":1}
+编辑：http://120.48.48.64:8096/api/houseList put请求  
+删除：http://120.48.48.64:8096/api/houseList/8  DELETE请求
+搜索：http://120.48.48.64:8096/api/houseList/list?buildNme=&status=&unitName=&houseNum=&currentPage=1&pageSize=10&total=6 get请求
+重置：http://120.48.48.64:8096/api/houseList/list?buildNme=&status=&unitName=&houseNum=&currentPage=1&pageSize=10&total=3 get
+
+车位管理：
+页面渲染：http://120.48.48.64:8096/api/parkList/list?currentPage=1&pageSize=10&parkName=&parkStatus=&parkType=&total=0get
+添加：http://120.48.48.64:8096/api/parkList  post请求    {"editType":"0","parkId":"","parkType":"0","parkName":"小宋","parkStatus":"0","parkNum":"1"}
+编辑：http://120.48.48.64:8096/api/parkList put请求  {"parkId":1,"parkType":"0","parkName":"A001","parkStatus":"1","parkNum":"111"}
+删除：http://120.48.48.64:8096/api/parkList/1 DELETE请求
+搜索：http://120.48.48.64:8096/api/parkList/list?currentPage=1&pageSize=10&parkName=D001&parkStatus=0&parkType=0&total=1 get请求
+重置：http://120.48.48.64:8096/api/parkList/list?currentPage=1&pageSize=10&parkName=&parkStatus=&parkType=&total=1 get
+
+业主列表：
+页面渲染：http://120.48.48.64:8096/api/liveUser/list?loginName=&phone=&currentPage=1&pageSize=10&total=0 get
+添加-角色：http://120.48.48.64:8096/api/role/getList get
+添加：http://120.48.48.64:8096/api/liveUser post  {"editType":"0","userId":"","username":"32323","phone":"112121","sex":"0","loginName":"宋增杰","password":"333","status":"0","roleId":6}
+编辑回填：http://120.48.48.64:8096/api/liveUser/getUserById?userId=19 get
+编辑：http://120.48.48.64:8096/api/liveUser  put  {"editType":"1","userId":20,"username":"32323232","phone":"112121","sex":"0","loginName":"宋增杰","password":"$2a$10$MlqRcCFUaNcEXLmxC4vJiOVayOSPC9S9DkEBnSehn1bvCZsYG9IFW","status":"0","roleId":6}
+分配房屋数据：http://120.48.48.64:8096/api/houseList/list?buildNme=&status=0&unitName=&houseNum=&currentPage=1&pageSize=10&total=0  get
+确定分配：http://120.48.48.64:8096/api/liveUser/assignSave  post  {"houseId":5,"userId":20}
+分配车位数据：http://120.48.48.64:8096/api/parkList/list?currentPage=1&pageSize=10&parkName=&parkStatus=0&parkType=&total=3  get
+确定分配车位：http://120.48.48.64:8096/api/liveUser/assignParkSave  post  {"parkId":5,"userId":20}
+退房：http://120.48.48.64:8096/api/liveUser/returnHose  post {"userId":20,"houseId":5}
+退车位：http://120.48.48.64:8096/api/liveUser/returnPark  post  {"userId":20,"parkId":5}
+删除： http://120.48.48.64:8096/api/liveUser/20 DELETE 
+搜索：http://120.48.48.64:8096/api/liveUser/list?loginName=%E5%BC%A0%E4%B8%89&phone=18687116223&currentPage=1&pageSize=10&total=2  get
+重置：http://120.48.48.64:8096/api/liveUser/list?loginName=&phone=&currentPage=1&pageSize=10&total=1 get
+
+收费管理-电费管理：
+页面渲染：http://120.48.48.64:8096/api/feePower/list?userName=&houseNum=&currentPage=1&pageSize=10&total=0 get  
+添加：http://120.48.48.64:8096/api/feePower  post请求   {"houseId":7,"unitId":10,"buildId":6,"editType":"0","powerId":"","payPowerMonth":"2022-01","payPowerMoney":"111","powerNum":"3213","payPowerStatus":"1"}
+编辑回填：http://120.48.48.64:8096/api/houseList/getHouseByUnitId?unitId=10 get
+编辑：http://120.48.48.64:8096/api/feePower  put请求  {"houseId":7,"unitId":10,"buildId":6,"powerId":19,"payPowerMonth":"2022-01","payPowerMoney":"11111","powerNum":"3213","payPowerStatus":"1"}
+删除：http://120.48.48.64:8096/api/feePower/19 DELETE请求
+缴费：http://120.48.48.64:8096/api/feePower/payPower post  {"powerId":17,"payPowerStatus":"1"}
+搜索：http://120.48.48.64:8096/api/feePower/list?userName=%E5%BC%A0%E4%B8%89&houseNum=A-102&currentPage=1&pageSize=10&total=4 get请求
+重置：http://120.48.48.64:8096/api/feePower/list?userName=&houseNum=&currentPage=1&pageSize=10&total=1
+
+收费管理-水费管理：
+页面渲染：http://120.48.48.64:8096/api/feeWater/list?total=0&currentPage=1&pageSize=10&userName=&houseNum= get  
+添加：http://120.48.48.64:8096/api/feeWater  post请求   {"editType":"0","waterId":"","buildId":1,"unitId":3,"houseId":4,"payWaterMonth":"2022-06","payWaterMoney":"213","waterrNum":"323","payWaterStatus":"0"}
+收费管理-停车管理：
+页面渲染：http://120.48.48.64:8096/api/feePark/list?currentPage=1&pageSize=10&userName=&parkName=&total=0 get
+添加：http://120.48.48.64:8096/api/feePark post {"parkFeeId":"","editType":"0","parkId":4,"payParkMonth":"2022-02","payParkMoney":"3213","payParkStatus":"0"}
+投诉管理-投诉列表：
+页面渲染：http://120.48.48.64:8096/api/userComplaint/list?currentPage=1&pageSize=10&title=&complaintContent=&total=0 get
+查询：http://120.48.48.64:8096/api/userComplaint/list?currentPage=1&pageSize=10&title=%E6%B5%8B%E8%AF%9511123&complaintContent=%E6%B5%8B%E8%AF%9511123&total=4 get
+处理：
+维修管理-维修管理：
+页面渲染：http://120.48.48.64:8096/api/userRepair/list?total=0&currentPage=1&pageSize=10&userId=&repairContent= get
+查询：http://120.48.48.64:8096/api/userRepair/list?total=0&currentPage=1&pageSize=10&userId=&repairContent=%E4%B8%8B%E6%B0%B4%E9%81%93%E5%A0%B5%E5%A1%9E get 
+
+公告管理-公告列表：
+页面渲染：http://120.48.48.64:8096/api/sysNotice/list?currentPage=1&pageSize=10&title=&total=0 get
+添加：http://120.48.48.64:8096/api/sysNotice post {"editType":"0","noticeId":"","userId":"","title":"宋增杰","noticeContent":"狗"}
+编辑：http://120.48.48.64:8096/api/sysNotice put  
+删除：http://120.48.48.64:8096/api/sysNotice/7 delete 
+搜索：http://120.48.48.64:8096/api/sysNotice/list?currentPage=1&pageSize=10&title=1&total=3 get
+重置：http://120.48.48.64:8096/api/sysNotice/list?currentPage=1&pageSize=10&title=1&total=3 get
